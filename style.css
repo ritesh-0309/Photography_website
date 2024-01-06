@@ -1,0 +1,283 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    background-color: black;
+}
+
+/* Navbar */
+
+nav{
+    width: 100%;
+    height: auto;
+}
+
+.navbar{
+    width: 100%;
+    height: 10vh;
+}   
+
+.wrapper{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.logo{
+    padding: 0 15px;
+    float: left;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.wrapper .search{
+    width: 500px;
+    height: 5.5vh;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+    padding: 0 10px;
+    overflow:hidden;
+}
+
+.wrapper .search input{
+    width: 90%;
+    height: 100%;
+    border: 1px solid white;
+    outline: none;
+    border-radius: 10px 0 0 10px;
+    font-size: 1.3rem;
+    padding-left: 10px;
+}
+
+.wrapper .search i{
+    width: 10%;
+    cursor: pointer;
+    border-radius:0 10px 10px 0;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.6rem;
+    border: 1px solid white;
+}
+
+.wrapper .links{
+    max-width: 450px;
+    width: 100%;
+   padding: 0 15px;
+    float: right;
+}
+
+.wrapper .links a{
+    color: white;
+    text-decoration: none;
+    font-size: 1.4rem;
+    margin: 0 15px;
+}
+
+.hamburg i{
+    cursor: pointer;
+    display: none;
+    color: white;
+    position: absolute;
+    top: 20px;
+    right:20px;
+    font-size: 2rem;
+}
+
+.res-logo{
+    pointer-events: none;
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    display: none;
+}
+
+.navbar-responsive{
+    width: 100%;
+    z-index: 10;
+    position: absolute;
+    transform: translateY(-40vh);
+    top: 0;
+    transition: 0.3s ease;
+    box-shadow: 0 0 20px black, 0 0 50px black;
+    background-color: black;
+    height: 30vh;
+}
+
+.navbar-responsive .cancel{
+    color: white;
+    position: absolute;
+    font-size: 2rem;
+    top: 20px;
+    right: 20px;;
+}
+
+.navbar-responsive .res-links{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: grid;
+    text-align: center;
+}
+
+.navbar-responsive .res-links a{
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    padding: 10px 0;
+    transition: 0.3s linear;
+}
+
+.navbar-responsive .res-links a:hover{
+    background: rgb(67, 65, 65);
+}
+
+.res-search{
+    width: 100%;
+    height: 5vh;
+    margin: 0 5%;
+    display: none;
+    position: relative;
+}
+
+.res-search input{
+    width: 80%;
+    z-index: 1;
+    padding-left:10px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    outline: none;
+    border: 1px solid white;
+    border-radius: 20px 0 0 20px ;
+    height: 100%;
+}
+
+.res-search i{
+    width: 10%;
+    position: absolute;
+    text-align: center;
+    padding-top: 5px;
+    height: 100%;
+    cursor: pointer;
+    border-radius:0 20px 20px 0;
+    color: white;
+    font-size: 1.4rem;
+    border: 1px solid white;
+}
+
+/* Section Start */
+
+.title{
+    color: white;
+    line-height: 6rem;
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: 0.8rem;
+    text-align: center;
+    word-spacing: 1rem;
+}
+  
+.container{
+    max-width: 93%;
+    margin: 20px auto;
+}
+
+.image-container{
+    margin-right: 0;
+    columns: 4;
+    gap: 1rem;
+
+  }
+  .image-container img{
+    margin-bottom: 10px;
+    width: 100%;
+    border-radius: 10px;
+}
+
+
+@media screen and (993px <= width <= 1200px) {
+    .image-container{
+        columns:3;
+    }
+  }
+  
+@media screen and (width<=992px){
+    .image-container{
+        columns:2;
+      }
+
+    .wrapper .logo{
+    font-size: 1.3rem;
+  }
+
+  .wrapper .links{
+    max-width: 370px;
+    padding: 0 5px;
+    font-size: 1rem;
+  }
+  .wrapper .links a{
+    font-size: 1.1rem;
+
+  }
+
+  .wrapper .search{
+    height: 4vh;
+    width: 400px;
+  }
+
+  .wrapper .search i{
+    font-size: 1.4rem;
+  }
+
+}
+
+@media screen and (width <= 800px) {
+  
+    .wrapper{
+        display: none;
+    }
+    .hamburg i{
+        display: block;
+        font-size: 2.5rem;
+    }
+
+    .res-logo{
+        display: block;
+    }
+
+    .res-search{
+        display: block;
+    }
+    .res-search i{
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
+  } 
+@media screen and (width <= 600px) {
+  .image-container{
+        columns:1;
+      }
+  } 
+
+  .res-search i{
+    font-size: 1.2rem;
+  }
+
+  .res-logo{
+    font-size: 1.3rem;
+  }
+
+  .hamburg i{
+    font-size: 1.8rem;
+  }
